@@ -411,7 +411,7 @@ class WebosPlusDevice extends WebOSTV {
     this.log(`toggleOnOff: Called`, value);
     if (value) {
       this.log(`toggleOnOff: Try to turn the tv on`);
-      const on = await this._turnOn().catch(this.error);
+      const on = await this._turnOff().catch(this.error);
       if (on) {
         this.log(`toggleOnOff: TV turned on. Set capability ${capabilities.onOff} to ${value}`);
         this.setCapabilityValue(capabilities.onOff, true);

@@ -291,20 +291,20 @@ class WebOSTV extends Homey.Device {
   /**
    * Turn tv on
    */
-  _turnOn() {
-    const {macAddress} = this.getSettings()
-    this.log(`_turnOn: Send request to turn on (WoL) with mac address ${ macAddress }`)
-    return new Promise((resolve, reject) => {
-      wol.wake(macAddress, (error) => {
-        if (error) {
-          this.error(`Failed waking up ${ macAddress }`)
-          return reject(error)
-        }
-        this.log('_turnOn: TV turned on successfully')
-        return resolve(true)
-      })
-    })
-  }
+//   _turnOn() {
+//     const {macAddress} = this.getSettings()
+//     this.log(`_turnOn: Send request to turn on (WoL) with mac address ${ macAddress }`)
+//     return new Promise((resolve, reject) => {
+//       wol.wake(macAddress, (error) => {
+//         if (error) {
+//           this.error(`Failed waking up ${ macAddress }`)
+//           return reject(error)
+//         }
+//         this.log('_turnOn: TV turned on successfully')
+//         return resolve(true)
+//       })
+//     })
+//   }
 
   /**
    * Turn tv off
